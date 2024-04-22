@@ -134,12 +134,17 @@ MEDIA_ROOT = MEDIA_DIR
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
+AUTH_USER_MODEL = "userauth.User"
+
 JAZZMIN_SETTINGS = {
     'site_header': "EDU Student Portal",
-    'site_brand': "Connecting Edu Engineers",
-    'site_logo': "images/logo.png",
+    'site_brand': "EDU Engineers",
+    'site_logo': "assets/images/logo.jpg",
+    "site_logo_classes": "slogo",
+    "login_logo": "assets/images/logo.jpg",
     'copyright':  "All Right Reserved 2023",
     "welcome_sign": "Welcome EDU Portal",
+    "custom_css": "assets/css/mycustom.css",
     "topmenu_links": [
     ],
 
@@ -171,33 +176,37 @@ JAZZMIN_SETTINGS = {
     "show_ui_builder" : True
 }
 JAZZMIN_UI_TWEAKS = {
+    
     "navbar_small_text": False,
     "footer_small_text": False,
     "body_small_text": True,
     "brand_small_text": False,
-    "brand_colour": "navbar-indigo",
-    "accent": "accent-olive",
-    "navbar": "navbar-indigo navbar-dark",
+    "brand_colour": "navbar-red",
+    "accent": "accent-white",
+    "navbar": "navbar-red navbar-light",  # Change to navbar-light for light theme
     "no_navbar_border": False,
     "navbar_fixed": False,
     "layout_boxed": False,
     "footer_fixed": False,
     "sidebar_fixed": False,
-    "sidebar": "sidebar-dark-indigo",
+    "sidebar": "sidebar-light-red",  # Change to sidebar-light-red for light theme
     "sidebar_nav_small_text": False,
     "sidebar_disable_expand": False,
     "sidebar_nav_child_indent": False,
     "sidebar_nav_compact_style": False,
     "sidebar_nav_legacy_style": False,
     "sidebar_nav_flat_style": False,
-    "theme": "cyborg",
-    "dark_mode_theme": "cyborg",
+    "theme": "cyborg",  # No change needed for light theme
+    "dark_mode_theme": "cyborg",  # No change needed for light theme
     "button_classes": {
         "primary": "btn-primary",
         "secondary": "btn-secondary",
         "info": "btn-info",
         "warning": "btn-warning",
         "danger": "btn-danger",
-        "success": "btn-success"
+        "success": "btn-success",
+        
     }
+     
+
 }
